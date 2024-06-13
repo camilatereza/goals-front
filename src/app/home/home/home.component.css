@@ -1,0 +1,14 @@
+mat-card {
+  display: flex;
+  margin: 2%;
+}
+
+mat-toolbar {
+  margin-block-end: 0.9%;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 500;
+}

@@ -1,0 +1,48 @@
+<ng-container *ngIf="listGroup$ | async as groups; else loading">
+  <mat-toolbar color="accent" class="header">
+    <h1 class="title">{{ "grupos de metas" | titlecase }}</h1>
+    <span class="spacer"></span>
+    <button (click)="openDialog()" mat-fab color="primary" class="btn">
+      <mat-icon> add_card</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="content">
+    @for (group of groups; track $index) {
+    <mat-card matRipple [matRippleCentered]="true" [matRippleTrigger]="trigger">
+      <a #trigger (click)="openDetails()" style="color: black">
+        <mat-card-header>
+          <mat-card-title>{{ group.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div>{{ group.category }}, {{ group.color }}</div>
+        </mat-card-content>
+      </a>
+      <mat-card-footer>
+        <button
+          (click)="favorite()"
+          mat-icon-button
+          matTooltip="Grupo favorito"
+          color="primary"
+        >
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button
+          (click)="remove()"
+          mat-icon-button
+          matTooltip="Remover Grupo"
+          color="warn"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-footer>
+    </mat-card>
+
+    }
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner /></div
+></ng-template>

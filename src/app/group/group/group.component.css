@@ -1,0 +1,39 @@
+.header {
+  align-items: center;
+  justify-items: center;
+}
+
+.content {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+mat-card {
+  flex-direction: row;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+mat-card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.btn {
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
