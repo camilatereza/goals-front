@@ -1,0 +1,44 @@
+@import "@angular/material";
+
+mat-toolbar-row {
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding: 0 16px;
+  width: 100%;
+  height: 100%;
+  position: initial;
+}
+
+nav {
+  justify-content: end;
+}
+
+.logo,
+.links {
+  display: flex;
+  /* horizontal */
+  justify-content: center;
+  /* vertical */
+  align-items: center;
+}
+
+.logo {
+  flex-direction: column;
+}
+
+.logo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 15px;
+}
+
+/* Quando o mouse passar em cima da logo */
+.logo :hover > h2 {
+  color: #4eb4f0;
+}
+
+.links li {
+  margin-right: 1em;
+  /* sem os pontos ou numeros antes do nome */
+  list-style: none;
+}

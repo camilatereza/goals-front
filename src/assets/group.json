@@ -1,0 +1,10 @@
+[
+  {
+    "_id": "1",
+    "name": "A fazer",
+    "category": "Metas pessoais",
+    "color": "purple"
+  },
+
+  { "_id": 2, "name": "Fazendo", "category": "Metas trabalho", "color": "blue" }
+]

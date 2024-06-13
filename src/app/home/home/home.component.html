@@ -1,0 +1,35 @@
+<ng-container>
+  <mat-card>
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <h1>{{ "grupo de metas" | titlecase }}</h1>
+        <span class="spacer"></span>
+        <a routerLink="/grupos">Ver mais</a>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-card-content class="groups_content"> Text content </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <h1>{{ "metas favoridas" | titlecase }}</h1>
+        <span class="spacer"></span>
+        <a routerLink="/metas">Ver mais</a>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-card-content> Text content </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <h1>{{ "metódos de organização" | titlecase }}</h1>
+        <span class="spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-card-content>
+      <app-method></app-method>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

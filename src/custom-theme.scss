@@ -1,0 +1,57 @@
+// Tema customizado usando Angular Material: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+
+// Incluir o estilo comum do material para usar mais simples no CSS
+@include mat.core();
+
+//Definindo paleta com o tema claro:
+$goals-app-primary: mat.define-palette(mat.$purple-palette); //primario
+$goals-app-accent: mat.define-palette(
+  mat.$blue-palette,
+  A200,
+  A100,
+  A400
+); //secundario
+$goals-app-warn: mat.define-palette(mat.$red-palette); //de alerta
+$goals-app-theme: mat.define-light-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $goals-app-primary,
+      accent: $goals-app-accent,
+      warn: $goals-app-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+); //todo o tema claro
+
+// setando o tema para todos os componentes
+@include mat.all-component-themes($goals-app-theme);
+
+//Definindo paleta para tema escuro
+$dark-primary: mat.define-palette(mat.$indigo-palette, 900); //primairo
+$dark-accent: mat.define-palette(
+  mat.$amber-palette,
+  A200,
+  A100,
+  A400
+); //secundario
+$dark-warn: mat.define-palette(mat.$deep-orange-palette); //alerta
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+); //todo o tema escuro
+
+//quando usar .goals-dark-theme em qualquer CSS, puxa o dark customizado
+.goals-dark-theme {
+  @include mat.all-component-colors($dark-theme);
+}

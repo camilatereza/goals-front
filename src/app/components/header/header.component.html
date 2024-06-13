@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a class="logo" routerLink="/inicio">
+      <img
+        src="https://assets-global.website-files.com/6399c61683700ed8ab159d36/6399f263345070816c93e9f3_Metas-alcancadas.png"
+        alt="Goals"
+      />
+      <h2>{{ "goals" | titlecase }}</h2>
+    </a>
+    <nav>
+      <ul class="links">
+        <li><a routerLink="/inicio">Home</a></li>
+        <li><a routerLink="/grupos">Grupo de metas</a></li>
+        <li><a routerLink="/metas">Acompanhar metas</a></li>
+        <li><a routerLink="/lembretes">Lembrete</a></li>
+        <li><a routerLink="/metodos">Metódos</a></li>
+      </ul>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
