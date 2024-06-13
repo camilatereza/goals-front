@@ -26,3 +26,15 @@ Para aperfeiçoar o conhecimento reduzimos as tecnologias usadas em:
 </ul>
 
 Estamos finalizando o projeto e tentaremos publica-los em produção para ficar acessivel a todos, mas um arquivo .joson replicará o banco de dados poara poder ser acessivel localmente, por hora <br>
+
+## Especificações de desenvolvimento
+Criamos 3 branchs, sendo elas: 
+<ul>
+  <li> <a href="https://github.com/camilatereza/goals-front/tree/develop"> Develop </a> </li>
+  <li> <a href="https://github.com/camilatereza/goals-front/tree/release"> Release </a> </li>
+  <li> <a href="https://github.com/camilatereza/goals-front"> Main </a> </li>
+</ul>
+
+Onde as duas primeiras estarão sempre mais atualizadas a medida que o sistema evolui, para seguir os procedimentos padrões de desenvolvimento <br>
+Criamos na aba <a href="https://github.com/camilatereza/goals-front/issues"> issues </a> um exemplo das atividades que estamos realizando e o vinculamos a branch <a href="https://github.com/camilatereza/goals-front/tree/camilatereza/issue1"> issue1 </a> também para seguir os padrões de desenvolvimento mais comuns <br>
+
