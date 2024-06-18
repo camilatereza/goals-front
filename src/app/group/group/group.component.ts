@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Group } from '../../model/group';
 import { GroupService } from '../services/group.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { CommonErrorComponent } from '../../common/components/common-error/common-error.component';
 
 @Component({
   selector: 'app-group',
@@ -16,24 +17,14 @@ export class GroupComponent {
   // Ao usar o Injectableno service, dá pra instanciar pelo contrutor com a variavel já inicializada
   constructor(
     private groupService: GroupService,
-    private _snackBar: MatSnackBar
+    private common: CommonErrorComponent
   ) {
     this.listGroup$ = this.groupService.getAllGroups().pipe(
       catchError((error) => {
-        this.onError('Erro ao carregar grupos');
+        common.onError('Erro ao carregar grupos');
         return of([]);
       })
     );
-  }
-
-  onError(msg: string) {
-    const snackBarConfig: MatSnackBarConfig = {
-      horizontalPosition: 'end',
-      verticalPosition: 'top',
-      duration: 5000,
-      panelClass: 'mat-snackbar-warn',
-    };
-    this._snackBar.open(msg, 'Cancelar', snackBarConfig);
   }
 
   openDialog(): void {}

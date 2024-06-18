@@ -1,0 +1,14 @@
+<ng-container>
+  @if (listMethods$ | async; as methods) {
+  <mat-toolbar color="accent" class="header">
+    <h1 class="title">{{ "Métodos de Organização" | titlecase }}</h1>
+  </mat-toolbar>
+  <div class="content">
+    @for (method of methods; track $index) {
+    <div></div>
+    }
+  </div>
+  } @else {
+  <app-common-error></app-common-error>
+  }
+</ng-container>

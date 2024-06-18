@@ -10,6 +10,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { CommonErrorComponent } from './components/common-error/common-error.component';
+
 @NgModule({
   exports: [
     MatCardModule,
@@ -21,6 +23,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRippleModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    CommonErrorComponent,
   ],
+  declarations: [CommonErrorComponent],
+  imports: [MatProgressSpinnerModule],
 })
 export class CommonImportsModule {}

@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: 'group', redirectTo: 'grupos' },
   { path: 'goals', redirectTo: 'metas' },
+  { path: 'method', redirectTo: 'metodos' },
 
   //criando os lazy loading para cada página
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
     path: 'metas',
     loadChildren: () =>
       import('./goals/goals.module').then((m) => m.GoalsModule),
+  },
+  {
+    path: 'metodos',
+    loadChildren: () =>
+      import('./method/method.module').then((m) => m.MethodModule),
   },
 ];
 
