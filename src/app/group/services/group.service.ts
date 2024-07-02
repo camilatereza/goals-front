@@ -9,7 +9,7 @@ import { Group } from '../../model/group';
   providedIn: 'root',
 })
 export class GroupService {
-  private readonly api = '../../assets/group.json';
+  private readonly api = 'http://localhost:3000/groups';
   constructor(private http: HttpClient) {}
 
   getAllGroups(): Observable<Group[]> {
@@ -17,11 +17,11 @@ export class GroupService {
   }
 
   getDetailsGroup(idGroup: number): Observable<Group> {
-    return this.http.get<Group>(this.api + `/${idGroup}`).pipe(take(1));
+    return this.http.get<Group>(`${this.api}/${idGroup}`).pipe(take(1));
   }
 
   removeGroup(idGroup: number): Observable<Group> {
-    return this.http.delete<Group>(this.api + `/${idGroup}`).pipe(take(1));
+    return this.http.delete<Group>(`${this.api}/${idGroup}`).pipe(take(1));
   }
 
   createNewGroup(body: string): Observable<Group> {

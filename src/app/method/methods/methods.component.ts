@@ -4,7 +4,7 @@ import { catchError, Observable, of } from 'rxjs';
 import { CommonErrorComponent } from '../../common/components/common-error/common-error.component';
 
 import { MethodService } from '../service/method.service';
-import { Method } from '../../model/method';
+import { Area, Smart } from '../../model/method';
 
 @Component({
   selector: 'app-methods',
@@ -12,17 +12,28 @@ import { Method } from '../../model/method';
   styleUrl: './methods.component.css',
 })
 export class MethodsComponent {
-  listMethods$: Observable<Method[]>;
+
+  listSmart$: Observable<Smart[]>;
+  listAreas$: Observable<Area[]>;
 
   constructor(
     private service: MethodService,
     private common: CommonErrorComponent
   ) {
-    this.listMethods$ = service.getAll().pipe(
+
+    this.listSmart$ = service.getAllSmart().pipe(
       catchError((error) => {
-        common.onError(`Erro ${error.code} ao carregar grupos`);
+        common.onError(`Erro ao carregar método SMART`);
+        return of([]);
+      })
+    );
+
+    this.listAreas$ = service.getAllAreas().pipe(
+      catchError((error) => {
+        common.onError(`Erro ao carregar método por áreas`);
         return of([]);
       })
     );
   }
+
 }

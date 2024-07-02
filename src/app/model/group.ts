@@ -1,7 +1,7 @@
 import { Goal } from './goal';
 
 export interface Group {
-  _id: number;
+  id: number;
   name: string;
   category: string; //areas da vida que as metas vão relacionar
   color: string; //customizar e diferenciar com cores futuramente com imagend também

@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "name": "A fazer",
+      "category": "Metas pessoais",
+      "color": "purple"
+    },
+    {
+      "id": 2,
+      "name": "Fazendo",
+      "category": "Metas trabalho",
+      "color": "blue"
+    }
+  ]
+}

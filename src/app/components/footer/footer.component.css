@@ -11,7 +11,12 @@ footer {
 footer h3 {
   font-size: 18px;
   color: black;
-  margin-bottom: 0.2em;
+  margin-top: 0.9em;
+}
+
+footer p {
+  margin: 0.2em;
+  margin-bottom: 3%;
 }
 
 footer span {

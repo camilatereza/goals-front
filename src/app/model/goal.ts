@@ -1,7 +1,7 @@
 import { Achievable } from './achievable';
 
 export interface Goal {
-  _id: number;
+  id: number;
   name: string;
   specific: string; //objetivo que a meta vai atender
   timely: string; //prazo até a conclusão

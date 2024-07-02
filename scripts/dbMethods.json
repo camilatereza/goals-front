@@ -1,0 +1,169 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "name": "Relacionamento",
+      "description": "Grande área responsável por incluir todas as relações interpessoais da nossa vida.",
+      "advantage": "Tanto no trabalho quanto na vida, ter networking e saber manter as pessoas por perto é essencial.",
+      "subarea": false,
+      "groupArea": null
+    },
+    {
+      "id": 2,
+      "name": "Qualidade de Vida",
+      "description": "Área que envolve aspectos fundamentais para o bem-estar físico, mental e espiritual.",
+      "advantage": "Investir na qualidade de vida pode melhorar significativamente a saúde e a felicidade geral de uma pessoa.",
+      "subarea": false,
+      "groupArea": null
+    },
+    {
+      "id": 3,
+      "name": "Pessoal",
+      "description": "Área que abrange o desenvolvimento pessoal em diversas dimensões.",
+      "advantage": "Investir em si mesmo pode resultar em maior autoconfiança, realização pessoal e capacidade de lidar com desafios.",
+      "subarea": false,
+      "groupArea": null
+    },
+    {
+      "id": 4,
+      "name": "Profissional",
+      "description": "Área dedicada ao desenvolvimento de habilidades e sucesso na carreira e finanças.",
+      "advantage": "Investir no desenvolvimento profissional pode resultar em avanço na carreira, estabilidade financeira e realização pessoal.",
+      "subarea": false,
+      "groupArea": null
+    },
+    {
+      "id": 5,
+      "name": "Família",
+      "description": "Relações familiares são a base da vida de qualquer pessoa.",
+      "advantage": "A família é o nosso primeiro contato com outras pessoas. Para se entender é necessário entender sua base e ela vem da família.",
+      "subarea": true,
+      "groupArea": 1
+    },
+    {
+      "id": 6,
+      "name": "Amor",
+      "description": "O relacionamento a dois traz inúmeros momentos bons, mas também muitos desafios.",
+      "advantage": "Estar com outra pessoa requer renúncias e muitas vezes um bom autoconhecimento e segurança. Desenvolver certas habilidades é essencial.",
+      "subarea": true,
+      "groupArea": 1
+    },
+    {
+      "id": 7,
+      "name": "Amigos",
+      "description": "As amizades proporcionam apoio emocional e momentos de diversão na vida de uma pessoa.",
+      "advantage": "Ter amigos verdadeiros pode contribuir para uma vida mais feliz e saudável, além de proporcionar oportunidades de crescimento pessoal.",
+      "subarea": true,
+      "groupArea": 1
+    },
+    {
+      "id": 8,
+      "name": "Saúde",
+      "description": "A saúde física é fundamental para o funcionamento adequado do corpo humano.",
+      "advantage": "Manter bons hábitos de saúde pode prevenir doenças e melhorar a qualidade de vida em geral.",
+      "subarea": true,
+      "groupArea": 2
+    },
+    {
+      "id": 9,
+      "name": "Lazer",
+      "description": "Atividades de lazer são essenciais para o relaxamento e o rejuvenescimento da mente e do corpo.",
+      "advantage": "Dedicar tempo ao lazer ajuda a reduzir o estresse e promove o equilíbrio entre trabalho e vida pessoal.",
+      "subarea": true,
+      "groupArea": 2
+    },
+    {
+      "id": 10,
+      "name": "Espiritual",
+      "description": "A espiritualidade envolve a busca por significado e propósito na vida, além de uma conexão com algo maior que o indivíduo.",
+      "advantage": "A prática espiritual pode proporcionar conforto emocional, fortalecer valores pessoais e promover um senso de comunidade.",
+      "subarea": true,
+      "groupArea": 2
+    },
+    {
+      "id": 11,
+      "name": "Intelectual",
+      "description": "O desenvolvimento intelectual envolve aprimorar habilidades cognitivas e adquirir conhecimento em diferentes áreas.",
+      "advantage": "Estimular o intelecto pode aumentar a capacidade de aprender e resolver problemas, além de abrir portas para novas oportunidades.",
+      "subarea": true,
+      "groupArea": 3
+    },
+    {
+      "id": 12,
+      "name": "Mental",
+      "description": "A saúde mental é crucial para o bem-estar emocional e psicológico de uma pessoa.",
+      "advantage": "Cuidar da saúde mental pode melhorar a qualidade de vida, promover relacionamentos saudáveis ​​e aumentar a resiliência.",
+      "subarea": true,
+      "groupArea": 3
+    },
+    {
+      "id": 13,
+      "name": "Sonhos",
+      "description": "Os sonhos representam aspirações e metas pessoais que uma pessoa deseja alcançar na vida.",
+      "advantage": "Perseguir e realizar sonhos pode proporcionar um senso de propósito e realização, incentivando o crescimento pessoal e profissional.",
+      "subarea": true,
+      "groupArea": 3
+    },
+    {
+      "id": 14,
+      "name": "Habilidade",
+      "description": "Desenvolver habilidades específicas é fundamental para se destacar e crescer profissionalmente.",
+      "advantage": "Dominar habilidades relevantes pode aumentar as chances de sucesso na carreira e abrir portas para novas oportunidades.",
+      "subarea": true,
+      "groupArea": 4
+    },
+    {
+      "id": 15,
+      "name": "Carreira",
+      "description": "A carreira representa o caminho profissional que uma pessoa escolhe seguir ao longo da vida.",
+      "advantage": "Planejar e gerenciar a carreira pode levar ao progresso profissional, satisfação no trabalho e realização pessoal.",
+      "subarea": true,
+      "groupArea": 4
+    },
+    {
+      "id": 16,
+      "name": "Finanças",
+      "description": "A gestão financeira eficaz é essencial para alcançar estabilidade econômica e segurança financeira.",
+      "advantage": "Desenvolver habilidades de gestão financeira pode ajudar a alcançar objetivos financeiros e reduzir o estresse relacionado ao dinheiro.",
+      "subarea": true,
+      "groupArea": 4
+    }
+  ],
+  "smart": [
+    {
+      "id": 1,
+      "letter": "S",
+      "translate": "Específica",
+      "description": "Metas claras e bem definidas",
+      "key": "Objetivo"
+    },
+    {
+      "id": 2,
+      "letter": "M",
+      "translate": "Mensurável",
+      "description": "As metas precisam ser quantificadas/medidas",
+      "key": "Processo"
+    },
+    {
+      "id": 3,
+      "letter": "A",
+      "translate": "Atingível",
+      "description": "Metas desafiadoras, mas que possam ser realizadas",
+      "key": "Alcançável"
+    },
+    {
+      "id": 4,
+      "letter": "R",
+      "translate": "Relevante",
+      "description": "Porquê a meta é importante e o que ela tras para o objetivo",
+      "key": "Importancia ou Benefício"
+    },
+    {
+      "id": 5,
+      "letter": "T",
+      "translate": "Temporal",
+      "description": "As metas precisam ter um tempo limite para ser cumpridas, priorizando e diminuindo a procastinação",
+      "key": "Prazo"
+    }
+  ]
+}

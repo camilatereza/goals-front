@@ -1,14 +1,86 @@
 <ng-container>
-  @if (listMethods$ | async; as methods) {
+  @if (listSmart$ | async ; as smarts) {
+    @if (listAreas$ | async ; as areas) {
+
   <mat-toolbar color="accent" class="header">
-    <h1 class="title">{{ "Métodos de Organização" | titlecase }}</h1>
+    <h1 class="title">
+      {{ "Métodos de Organização" | titlecase }}
+    </h1>
   </mat-toolbar>
+
   <div class="content">
-    @for (method of methods; track $index) {
-    <div></div>
-    }
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="title"> {{ "Método SMART" | titlecase }} </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="infoTable">
+        @for (method of smarts; track $index) {
+          <div class="txt">
+            <h3> {{ method.letter }} </h3>
+            <h3> {{ method.translate | titlecase }} </h3>
+            <br>
+            <p> {{ method.description }} </p>
+            <br>
+            <p> Palavra chave: <br> <strong> {{ method.key }} </strong> </p>
+          </div>
+        }
+      </div>
+        <p> <br> Ao criar uma meta, os campos que são preenchidos levam o nome da palavra chave de cada letra da sigla </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="title"> {{ "Áreas da vida" | titlecase }} </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content style="text-align: center">
+        <div class="areaTxt">
+          <h3><strong>4 áreas da vida divididas em 12 subáreas</strong> </h3>
+          <img class="img" src="../../../assets/areas.png" alt="Áreas da vida">
+          <p style="text-align: initial;">
+            Defina metas de acordo com as áreas da sua vida e desenvolva atividades mais objetivas
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-  } @else {
+
+  <div class="description">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="title"> {{ "Detalhes" | titlecase }} </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="areaTxt">
+          <p> Cada área da vida tem um  objetivo a ser desenvolvido. Cada área foi subdividada em 3 subareas
+            (totalizando 12), fazendo deste um otimo méotodo, pois é alinhado ao foco dos nossos obejtivos e
+            nos ajuda a trabalhar vários momentos, problemas e habilidades em perspectivas diferentes do cotidiano. </p>
+          <br>
+          <p> Vamos conhecer cada uma delas com detalhes, abaixo:</p>
+
+          @for (method of areas; track $index) {
+            <div class="areaTxt">
+              @if (method.subarea == false) {
+                <p class="bigArea"> <strong>{{ method.name }}</strong> </p>
+              } @else {
+                <p class="subArea"> <strong> {{ method.name}} </strong> </p>
+              }
+              <br>
+              <p> {{method.description}} </p>
+              <br>
+              <p class="break-line"> {{method.advantage.replaceAll(';', '\n')}} </p>
+            </div>
+          }
+        </div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+
+  }} @else {
   <app-common-error></app-common-error>
   }
 </ng-container>

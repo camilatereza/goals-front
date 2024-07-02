@@ -7,11 +7,7 @@
 
 html,
 body {
-  height: 100%;
   background-color: aliceblue;
-}
-
-body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 

@@ -1,0 +1,59 @@
+.header {
+  align-items: center;
+  justify-items: center;
+}
+
+mat-card {
+  width: 100%;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.infoTable {
+  display: flex;
+  flex-direction: row;
+}
+
+h3 {
+  text-align: center;
+}
+
+.txt {
+  margin: 1%;
+  font-size: 0.95rem;
+}
+
+.img {
+  width: 50%;
+  height: 50%;
+}
+
+.bigArea strong {
+  font-size: 20px;
+}
+
+.subArea strong {
+  font-size: 18px;
+}
+
+.areaTxt {
+  margin: 1%;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
