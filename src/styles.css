@@ -29,3 +29,13 @@ button:hover {
 .spacer {
   flex: 1 1 auto;
 }
+
+mat-card {
+  margin-top: 20px;
+  max-width: calc(100vw - 20px);
+  min-width: calc(45vw - 20px);
+}
+
+mat-card-header {
+  justify-content: center;
+}

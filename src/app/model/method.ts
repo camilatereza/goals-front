@@ -2,6 +2,7 @@ export interface Smart {
   id: number;
   letter: string; //letra referencia da sigla
   translate: string; //significado em português
+  abstract: string; //resumo do porquê usar
   description: string; //descrição de como usar e para que serve
   key: string; //palavra chave da sigla
 }

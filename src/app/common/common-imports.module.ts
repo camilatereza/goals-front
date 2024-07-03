@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
@@ -11,6 +12,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { CommonErrorComponent } from './components/common-error/common-error.component';
+import { CommomMethodsComponent } from './components/common-methods/commom-methods.component';
 
 @NgModule({
   exports: [
@@ -24,8 +26,9 @@ import { CommonErrorComponent } from './components/common-error/common-error.com
     MatProgressSpinnerModule,
     MatSnackBarModule,
     CommonErrorComponent,
+    CommomMethodsComponent,
   ],
-  declarations: [CommonErrorComponent],
-  imports: [MatProgressSpinnerModule],
+  declarations: [CommonErrorComponent, CommomMethodsComponent],
+  imports: [CommonModule, MatProgressSpinnerModule, MatCardModule],
 })
 export class CommonImportsModule {}

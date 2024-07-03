@@ -18,35 +18,40 @@
       "id": 1,
       "letter": "S",
       "translate": "Específica",
-      "description": "Metas claras e bem definidas",
+      "abstract": "O objetivo da meta.",
+      "description": "As metas precisam ser claras e bem objetivas. O que essa meta vai lhe trazer?",
       "key": "Objetivo"
     },
     {
       "id": 2,
       "letter": "M",
       "translate": "Mensurável",
-      "description": "As metas precisam ser quantificadas/medidas",
+      "abstract": "Medir o progresso da meta.",
+      "description": "Para auxiliar na realização da meta é necessário defini-las e acompanha-las. Quantas vezes definimos metas em Janeiro e esquecemos completamente? Medir o progresso é fundamental para a realização.",
       "key": "Processo"
     },
     {
       "id": 3,
       "letter": "A",
       "translate": "Atingível",
-      "description": "Metas desafiadoras, mas que possam ser realizadas",
-      "key": "Alcançável"
+      "abstract": "Quebrar as metas em pequenos passos alcançaveis.",
+      "description": "Muitas vezes a meta por si só não é alcançavel, mas se a quebramos em penas metas será mais facil atingi-las. Por exemplo, para emagrecer o primeiro passo é definir uma dieta saudavel.",
+      "key": "Passos"
     },
     {
       "id": 4,
       "letter": "R",
       "translate": "Relevante",
-      "description": "Porquê a meta é importante e o que ela tras para o objetivo",
-      "key": "Importancia ou Benefício"
+      "abstract": "Porquê a meta é importante e qual beneficio ela trás.",
+      "description": "Defina quala importancia dela, para lhe ajudar a sempre que perder o foco, entender porquê é necessário faze-la.",
+      "key": "Importancia"
     },
     {
       "id": 5,
       "letter": "T",
       "translate": "Temporal",
-      "description": "As metas precisam ter um tempo limite para ser cumpridas, priorizando e diminuindo a procastinação",
+      "abstract": "Definição de um prazo para a meta e tentar cumpri-la nesse tempo.",
+      "description": "Quando não definimos um tempo para cumprir aquela trefa é normal que a procastinação assuma, dessa forma é essencial que cada meta tenha um prazo e dentro dele, podemos definir os prazos das pequenas metas, para assim, tira-la do mundo das ideias.",
       "key": "Prazo"
     }
   ],
