@@ -1,10 +1,10 @@
 footer {
-  border-top: 1px solid #4eb4f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 20%;
+  border-top: 1px solid #4eb4f0;
   color: #646464;
 }
 

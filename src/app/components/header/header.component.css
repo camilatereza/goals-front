@@ -2,15 +2,10 @@
 
 mat-toolbar-row {
   justify-content: space-between;
-  border-bottom: 1px solid #000000;
-  padding: 0 16px;
-  width: 100%;
+  border-bottom: 1px solid #4eb4f0;
+  padding: 0 5vw;
   height: 100%;
   position: initial;
-}
-
-nav {
-  justify-content: end;
 }
 
 .logo,
@@ -23,13 +18,17 @@ nav {
 }
 
 .logo {
-  flex-direction: column;
+  align-content: center;
+  margin: 0.5em;
 }
 
 .logo img {
-  width: 38px;
-  height: 38px;
-  border-radius: 15px;
+  max-width: 10vw;
+  max-height: 10vh;
+}
+
+.logo h2 {
+  font-size: 1.5em;
 }
 
 /* Quando o mouse passar em cima da logo */
@@ -41,4 +40,5 @@ nav {
   margin-right: 1em;
   /* sem os pontos ou numeros antes do nome */
   list-style: none;
+  font-size: 1em;
 }
