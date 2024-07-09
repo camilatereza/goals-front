@@ -3,14 +3,18 @@
     {
       "id": "1",
       "name": "A fazer",
+      "favorite": false,
       "category": "Metas pessoais",
-      "color": "purple"
+      "color": "purple",
+      "goals": []
     },
     {
       "id": 2,
       "name": "Fazendo",
+      "favorite": false,
       "category": "Metas trabalho",
-      "color": "blue"
+      "color": "blue",
+      "goals": []
     }
   ],
   "smart": [

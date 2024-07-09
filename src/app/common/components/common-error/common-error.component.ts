@@ -1,6 +1,5 @@
 import { Component, Injectable } from '@angular/core';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
-import { catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-common-error',
@@ -21,12 +20,5 @@ export class CommonErrorComponent {
       panelClass: 'mat-snackbar-warn',
     };
     this._snackBar.open(msg, 'Cancelar', snackBarConfig);
-  }
-
-  public errorMsg (msg: string): void {
-    catchError((error) => {
-      this.onError(msg);
-      return of([]);
-    });
   }
 }
