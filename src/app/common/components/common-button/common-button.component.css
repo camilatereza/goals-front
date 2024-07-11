@@ -1,0 +1,14 @@
+.btn {
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+mat-icon {
+  transition: color 0.3s ease;
+}
+
+mat-icon[aria-label="favorite"] {
+  transition: color 0.3s ease;
+  color: purple; /* Cor quando favoritado */
+}

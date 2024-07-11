@@ -1,7 +1,7 @@
 {
   "groups": [
     {
-      "id": "1",
+      "id": 1,
       "name": "A fazer",
       "favorite": false,
       "category": "Metas pessoais",
@@ -14,6 +14,14 @@
       "favorite": false,
       "category": "Metas trabalho",
       "color": "blue",
+      "goals": []
+    },
+    {
+      "id": 3,
+      "name": "teste",
+      "favorite": false,
+      "category": "Metas trabalho",
+      "color": "gray",
       "goals": []
     }
   ],

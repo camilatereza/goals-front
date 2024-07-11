@@ -10,21 +10,26 @@ import { Group } from '../../model/group';
 })
 export class GroupService {
   private readonly api = 'http://localhost:3000/groups';
+
   constructor(private http: HttpClient) {}
+
+  createNewGroup(body: string): Observable<Group> {
+    return this.http.post<Group>(this.api, body).pipe(take(1));
+  }
+
+  removeItem(idGroup: number): Observable<Group> {
+    return this.http.delete<Group>(`${this.api}/${idGroup}`);
+  }
 
   getAllGroups(): Observable<Group[]> {
     return this.http.get<Group[]>(this.api).pipe(take(1), delay(1000));
   }
 
-  getDetailsGroup(idGroup: number): Observable<Group> {
+  getDetails(idGroup: number): Observable<Group> {
     return this.http.get<Group>(`${this.api}/${idGroup}`).pipe(take(1));
   }
 
-  removeGroup(idGroup: number): Observable<Group> {
-    return this.http.delete<Group>(`${this.api}/${idGroup}`).pipe(take(1));
-  }
-
-  createNewGroup(body: string): Observable<Group> {
-    return this.http.post<Group>(this.api, body).pipe(take(1));
+  favoriteUpdate(idGroup: number, body: string): Observable<Group> {
+    return this.http.put<Group>(`${this.api}/${idGroup}`, body);
   }
 }

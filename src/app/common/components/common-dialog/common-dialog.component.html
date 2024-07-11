@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+@if(data.type == 'form'){
+<mat-dialog-content>form</mat-dialog-content>
+
+} @else {
+<mat-dialog-content> {{ data.msg }}</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-flat-button mat-dialog-close color="accent" (click)="onClose()">
+    Voltar
+  </button>
+
+  @if(data.type == 'delete'){
+  <button mat-flat-button color="warn" (click)="onDelete()">Deletar</button>
+  }
+</mat-dialog-actions>
+}
