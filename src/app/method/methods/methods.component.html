@@ -8,56 +8,65 @@
     </h1>
   </mat-toolbar>
 
-  <app-common-methods [smartsData] = smarts ></app-common-methods>
+  <mat-card style="display: flex; flex-direction: row">
+    <app-common-methods [type]="'smart'" [smartsData]="smarts" />
+    <app-common-methods [type]="'areas'" />
+  </mat-card>
 
   <div class="description">
     <mat-card>
-        <mat-card-header>
-            <mat-card-title class="title"> {{ "Detalhes" | titlecase }} </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <div class="txt">
-            <p>
-              A seguir, cada ponto citado em cada método será descrito e explicado com mais detalhes.
-              Para assim auxiliar o entendimento da importancia do uso de cada um deles
-            </p>
-            <br>
-            <h1>{{ "Método Smart" | titlecase }}</h1>
-            <br>
-            @for (method of smarts; track $index) {
-              <p>({{method.letter}}) <strong>{{method.translate}}</strong>: {{method.description}}</p>
-              <p>  Palavra chave: <strong>{{method.key}}</strong></p>
-              <br>
-            }
-            <h1>{{ "Areas da vida" | titlecase }}</h1>
-            <br>
-            <p> Cada área da vida tem um  objetivo a ser desenvolvido. Cada área foi subdividada em 3 subareas
-              (totalizando 12), fazendo deste um otimo méotodo, pois é alinhado ao foco dos nossos obejtivos e
-              nos ajuda a trabalhar vários momentos, problemas e habilidades em perspectivas diferentes do cotidiano. </p>
-            <br>
-            <p> Vamos conhecer cada uma delas com detalhes, abaixo:</p>
+      <mat-card-header>
+        <mat-card-title class="title">
+          {{ "Detalhes" | titlecase }}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="txt">
+          <p>
+            A seguir, cada ponto citado em cada método será descrito e explicado
+            com mais detalhes. Para assim auxiliar o entendimento da importancia
+            do uso de cada um deles
+          </p>
+          <br />
+          <h1>{{ "Método Smart" | titlecase }}</h1>
+          <br />
+          @for (method of smarts; track $index) {
+            <p>({{ method.letter }}) <strong>{{ method.translate }}</strong>: {{ method.description }}</p>
+            <p> Palavra chave: <strong>{{ method.key }}</strong></p>
+            <br />
+          }
+          <h1>{{ "Areas da vida" | titlecase }}</h1>
+          <br />
+          <p>
+            Cada área da vida tem um objetivo a ser desenvolvido. Cada área foi
+            subdividada em 3 subareas (totalizando 12), fazendo deste um otimo
+            méotodo, pois é alinhado ao foco dos nossos obejtivos e nos ajuda a
+            trabalhar vários momentos, problemas e habilidades em perspectivas
+            diferentes do cotidiano.
+          </p>
+          <br />
+          <p>Vamos conhecer cada uma delas com detalhes, abaixo:</p>
 
-            @for (method of areas; track $index) {
-              <div class="areaTxt">
-                @if (method.subarea == false) {
-                  <p> <strong>{{ method.name }}</strong>: {{method.description}} </p>
-                  <p> {{method.advantage}} </p>
-                  <br>
-                } @else {
-                  <p> <strong>{{ method.name}}</strong>: {{method.description}} </p>
-                  <br>
-                  <p> {{method.advantage.replaceAll(';', '\n')}} </p>
-                  <br>
-                }
-              </div>
-            }
-          </div>
-        </mat-card-content>
+          @for (method of areas; track $index) {
+            <div class="areaTxt">
+              @if (method.subarea == false) {
+                <p><strong>{{ method.name }}</strong>: {{ method.description }}</p>
+                <p>{{ method.advantage }}</p>
+                <br />
+              } @else {
+                <p><strong>{{ method.name }}</strong>: {{ method.description }}</p>
+                <br />
+                <p>{{ method.advantage.replaceAll(";", "\n") }}</p>
+                <br />
+              }
+            </div>
+          }
+        </div>
+      </mat-card-content>
     </mat-card>
   </div>
 
   }} @else {
-    <app-common-error></app-common-error>
+  <app-common-error></app-common-error>
   }
-
 </ng-container>

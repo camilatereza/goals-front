@@ -26,10 +26,6 @@ mat-card {
   margin-right: 20px;
 }
 
-mat-card-header {
-  flex-direction: column;
-}
-
 mat-card-footer {
   display: flex;
   flex-direction: column;

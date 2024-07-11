@@ -1,48 +1,38 @@
-<div class="content">
-
-  <mat-card style="margin-right: 20px; width: min-content;">
-    <mat-card-header>
-      <mat-card-title class="title"> {{ "Método SMART" | titlecase }} </mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-      <div class="infoTable">
-      @for (method of smartsData; track $index) {
-        <div class="txt">
-          <br>
-          <h3> {{ method.letter }} </h3>
-          <h3> {{ method.translate | titlecase }} </h3>
-          <br>
-          <p> {{ method.abstract }} </p>
-          <br>
-          <p> <strong>{{ method.key }}</strong> </p>
-        </div>
-      }
-      </div>
-      <p>
-        <br>
-        Ao criar uma meta, os campos que são preenchidos levam o nome da palavra em negito que está ao final de cada defiição.
-        <br>
-        <br>
-        <i>(As palavras chave de cada sigla)</i>
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title class="title"> {{ "Áreas da vida" | titlecase }} </mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-      <div class="areaTxt">
-        <p>
-          <img class="img" src="../../../assets/areas.png" alt="Áreas da vida">
-          <strong>4 áreas da vida divididas em 12 subáreas</strong> <br>
-          Defina metas de acordo com as áreas da sua vida
-          e desenvolva atividades mais objetivas.
-        </p>
-      </div>
-    </mat-card-content>
-  </mat-card>
+@if (type == 'smart') {
+<div class="card">
+  <h2>{{ "Método SMART" | titlecase }}</h2>
+  <div class="infoTable">
+    @for (method of smartsData; track $index) {
+    <div class="txt">
+      <br />
+      <h3>{{ method.letter }}</h3>
+      <h3>{{ method.translate | titlecase }}</h3>
+      <br />
+      <p>{{ method.abstract }}</p>
+      <br />
+      <p><strong>{{ method.key }}</strong></p>
+    </div>
+    }
+  </div>
+  <p>
+    <br />
+    Ao criar uma meta, os campos que são preenchidos levam o nome da palavra em
+    negito que está ao final de cada defiição.
+    <br />
+    <br />
+    <i>(As palavras chave de cada sigla)</i>
+  </p>
 </div>
+
+} @else if (type == 'areas') {
+<div class="card">
+  <h2>{{ "Áreas da vida" | titlecase }}</h2>
+
+  <p style="margin: 0.8vmax">
+    <img class="img" src="../../../assets/areas.png" alt="Áreas da vida" />
+    <strong>4 áreas da vida divididas em 12 subáreas</strong> <br />
+    Defina metas de acordo com as áreas da sua vida e desenvolva atividades mais
+    objetivas.
+  </p>
+</div>
+}

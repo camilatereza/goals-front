@@ -30,10 +30,13 @@
         <a routerLink="/metodos">Ver mais</a>
       </mat-toolbar-row>
     </mat-toolbar>
-    <app-common-methods [smartsData] = smarts ></app-common-methods>
+    <mat-card-content class="methods">
+      <app-common-methods [type]="'smart'" [smartsData]="smarts"/>
+      <app-common-methods [type]="'areas'"/>
+    </mat-card-content>
   </mat-card>
 
-} @else {
+  } @else {
   <app-common-error></app-common-error>
-}
+  }
 </ng-container>

@@ -1,18 +1,17 @@
-mat-card {
-  margin-top: 20px;
-  max-width: calc(100vw - 20px);
-  min-width: calc(45vw - 20px);
+.card {
+  max-width: 50vw;
+  min-width: 45vw;
+  justify-items: center;
+  text-align: center;
+  margin: 0.3rem;
+  padding: 1rem;
+  border: 0.1rem groove;
 }
 
-.title {
+h2 {
   font-size: 1.8rem;
   font-weight: 500;
-}
-
-.content {
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  text-align: center;
 }
 
 .infoTable {
@@ -24,17 +23,15 @@ mat-card {
 .txt {
   text-align: center;
   font-size: 0.95rem;
-  width: 80%;
-  padding: 2%;
+  padding: 1rem;
 }
 
-.areaTxt p {
+p {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  margin: 1vmax;
 }
 
 .img {
