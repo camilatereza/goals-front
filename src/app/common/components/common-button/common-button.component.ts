@@ -14,6 +14,7 @@ import { DialogData } from '../../../model/dialogData';
 })
 export class CommonButtonComponent {
   @Input() type: 'favorite' | 'delete' | 'back' | null = null;
+  @Input() white?: boolean;
   @Input() item?: any;
   @Input() service?: any;
   @Output() itemDeleted = new EventEmitter<number>();

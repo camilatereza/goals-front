@@ -11,6 +11,8 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { CommonErrorComponent } from './components/common-error/common-error.component';
 import { CommomMethodsComponent } from './components/common-methods/commom-methods.component';
@@ -29,6 +31,8 @@ import { CommonDialogComponent } from './components/common-dialog/common-dialog.
     MatProgressSpinnerModule,
     MatSnackBarModule,
     MatDialogModule,
+    MatCheckboxModule,
+    MatProgressBarModule,
     CommonErrorComponent,
     CommomMethodsComponent,
     CommonButtonComponent,

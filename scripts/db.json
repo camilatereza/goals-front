@@ -20,9 +20,33 @@
       "id": 3,
       "name": "teste",
       "favorite": false,
-      "category": "Metas trabalho",
-      "color": "gray",
-      "goals": []
+      "description": "Metas de qualidade com foco na saúde",
+      "category": "Metas de Qualidade de vida",
+      "color": "green",
+      "goals": [
+        {
+          "id": 1,
+          "name": "Emagrecer",
+          "specific": "Perder X kg.",
+          "timely": "Em 2 meses.",
+          "relevant": "Melhorar a saúde.",
+          "steps": [
+            {
+              "id": 1,
+              "description": "Academia 3 vezes por semana."
+            },
+            {
+              "id": 2,
+              "description": "Buscar receitas fit e rápidas."
+            },
+            {
+              "id": 3,
+              "description": "Doce/Besteira 1 vez por semana."
+            }
+          ],
+          "measurable": "10%"
+        }
+      ]
     }
   ],
   "smart": [

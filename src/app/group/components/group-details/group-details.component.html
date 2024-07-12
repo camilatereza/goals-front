@@ -1,0 +1,62 @@
+@if (group != null) {
+<mat-card [ngStyle]="{ 'border-top': '1rem solid ' + group.color}">
+  <mat-card-header>
+    <mat-toolbar [style]="'background-color: ' + group.color">
+
+      <mat-card-title>{{ group.name | titlecase }} </mat-card-title>
+      <mat-card-subtitle> >> {{ group.category | titlecase }}</mat-card-subtitle>
+
+      <span class="spacer"></span>
+
+      <app-common-button
+        [type]="'favorite'"
+        [white]="true"
+        [item]="group"
+        [service]="service"/>
+      <app-common-button [white]="true" [type]="'back'"/>
+
+    </mat-toolbar>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div style="display: flex;">
+
+    @for (goal of group.goals; track $index) {
+
+      <div class="content">
+
+        <div class="header">
+          <h2>{{goal.name | titlecase}}</h2>
+          <span class="spacer"></span>
+          <!-- check de toda a meta -->
+        </div>
+
+        <div class="general">
+          <p><strong>S - Objetivo: </strong><u>{{goal.specific}}</u></p>
+          <p><strong>T - Prazo: </strong><u>{{goal.timely}}</u></p>
+          <p><strong>R - Importancia: </strong><u>{{goal.relevant}}</u></p>
+        </div>
+
+        <div style="display: flex;">
+          <hr>
+          <div class="achievable">
+            <p><strong>A - Passos:</strong></p>
+            <ul>
+            @for (step of goal.steps; track $index) {
+              <li> <mat-checkbox> {{step.description}} </mat-checkbox></li>
+            }
+            </ul>
+          </div>
+        </div>
+
+        <div class="progress">
+          <p><strong>M - Progresso:</strong></p>
+          <hr>
+          <mat-progress-bar mode="buffer" style="padding-top: 4vh;"></mat-progress-bar>
+        </div>
+      </div>
+    }
+    </div>
+  </mat-card-content>
+</mat-card>
+}

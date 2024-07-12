@@ -1,8 +1,8 @@
 <ng-container>
-  <mat-toolbar color="accent" class="header">
+  <mat-toolbar color="accent">
     <h1 class="title">{{ "grupos de metas" | titlecase }}</h1>
     <span class="spacer"></span>
-    <button (click)="onAdd()" mat-fab color="primary" class="btn">
+    <button mat-fab (click)="onAdd()" color="primary" class="btn">
       <mat-icon>add_card</mat-icon>
     </button>
   </mat-toolbar>
@@ -18,12 +18,17 @@
       [ngStyle]="{ 'border-top': '1rem solid ' + getColor(group) }"
     >
       <a #trigger (click)="openDetails(group)" style="color: black">
-        <mat-card-header class="header">
+        <mat-card-header>
           <mat-card-title>{{ group.name | titlecase }}</mat-card-title>
+          <mat-card-subtitle>{{ group.category | titlecase }}</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
-          <div>{{ group.category }}, {{ group.color }}</div>
+          @if (group.description) {
+          <p>{{ group.description }}</p>
+          } @else {
+          <span class="spacer"></span>
+          }
         </mat-card-content>
       </a>
 

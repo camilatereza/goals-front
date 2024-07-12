@@ -1,14 +1,21 @@
-.btn {
-  justify-content: center;
-  width: 35px;
-  height: 35px;
+.favorite {
+  transition: color 0.3s ease;
+  color: purple;
 }
 
-mat-icon {
+/* Icone branco quando tem background-color */
+.white-favorite {
   transition: color 0.3s ease;
+  color: white;
 }
 
-mat-icon[aria-label="favorite"] {
+.back {
   transition: color 0.3s ease;
-  color: purple; /* Cor quando favoritado */
+  color: red;
+}
+
+/* Icone branco quando tem background-color */
+.white-back {
+  transition: color 0.3s ease;
+  color: white;
 }

@@ -22,7 +22,7 @@ export class GroupService {
   }
 
   getAllGroups(): Observable<Group[]> {
-    return this.http.get<Group[]>(this.api).pipe(take(1), delay(1000));
+    return this.http.get<Group[]>(this.api).pipe(take(1));//, delay(1000));
   }
 
   getDetails(idGroup: number): Observable<Group> {

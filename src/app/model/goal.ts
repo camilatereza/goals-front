@@ -6,6 +6,6 @@ export interface Goal {
   specific: string; //objetivo que a meta vai atender
   timely: string; //prazo até a conclusão
   relevant: string; //qual importancia dela
-  smallGoals?: Achievable[]; //quebra-la em metas alcançaveis
+  steps?: Achievable[]; //quebra-la em metas alcançaveis
   measurable: string; //mensurar o progresso da meta
 }

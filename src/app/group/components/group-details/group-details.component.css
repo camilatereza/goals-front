@@ -1,0 +1,49 @@
+mat-card-header {
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar {
+  align-items: center;
+}
+
+mat-card-title {
+  align-self: center;
+  color: white;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+mat-card-subtitle {
+  align-self: center;
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+mat-card-content {
+  padding-top: 2vh;
+}
+
+.content{
+  border: 0.2vw ridge;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.header, .general, .achievable, .progress{
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+}
+
+.general{
+  border: 0.2rem groove;
+  border-radius: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0.3rem;
+}

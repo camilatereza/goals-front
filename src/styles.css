@@ -21,14 +21,12 @@ a:hover {
   color: #4eb4f0;
 }
 
-button:hover {
-  color: #4eb4f0;
-}
-
 .spacer {
   flex: 1 1 auto;
 }
 
 mat-card-header {
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
