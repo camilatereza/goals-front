@@ -4,7 +4,10 @@
       "id": 1,
       "name": "A fazer",
       "favorite": false,
-      "category": "Metas pessoais",
+      "category": {
+        "id": 3,
+        "name": "Metas pessoais"
+      },
       "color": "purple",
       "goals": []
     },
@@ -12,7 +15,10 @@
       "id": 2,
       "name": "Fazendo",
       "favorite": false,
-      "category": "Metas trabalho",
+      "category": {
+        "id": 4,
+        "name": "Metas Profissionais"
+      },
       "color": "blue",
       "goals": []
     },
@@ -21,7 +27,10 @@
       "name": "teste",
       "favorite": false,
       "description": "Metas de qualidade com foco na saúde",
-      "category": "Metas de Qualidade de vida",
+      "category": {
+        "id": 2,
+        "name": "Metas de Qualidade de vida"
+      },
       "color": "green",
       "goals": [
         {
@@ -47,6 +56,48 @@
           "measurable": "10%"
         }
       ]
+    }
+  ],
+  "goals":[
+    {
+      "id": 1,
+      "name": "Emagrecer",
+      "specific": "Perder X kg.",
+      "timely": "Em 2 meses.",
+      "relevant": "Melhorar a saúde.",
+      "steps": [
+        {
+          "id": 1,
+          "description": "Academia 3 vezes por semana."
+        },
+        {
+          "id": 2,
+          "description": "Buscar receitas fit e rápidas."
+        },
+        {
+          "id": 3,
+          "description": "Doce/Besteira 1 vez por semana."
+        }
+      ],
+      "measurable": "10%"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Metas de Relacionamento"
+    },
+    {
+      "id": 2,
+      "name": "Metas de Qualidade de vida"
+    },
+    {
+      "id": 3,
+      "name": "Metas Pessoais"
+    },
+    {
+      "id": 4,
+      "name": "Metas Profissionais"
     }
   ],
   "smart": [
