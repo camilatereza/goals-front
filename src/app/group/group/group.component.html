@@ -1,13 +1,13 @@
 <ng-container>
+  @if (listGroup$ | async; as groups) {
   <mat-toolbar color="accent">
     <h1 class="title">{{ "grupos de metas" | titlecase }}</h1>
     <span class="spacer"></span>
-    <button mat-fab (click)="onAdd()" color="primary" class="btn">
+    <button mat-fab (click)="openAddDialog(groups.length)" color="primary" class="btn">
       <mat-icon>add_card</mat-icon>
     </button>
   </mat-toolbar>
 
-  @if (listGroup$ | async; as groups) {
   <div class="content">
     @for (group of groups; track $index) {
 
@@ -20,7 +20,7 @@
       <a #trigger (click)="openDetails(group)" style="color: black">
         <mat-card-header>
           <mat-card-title>{{ group.name | titlecase }}</mat-card-title>
-          <mat-card-subtitle>{{ group.category | titlecase }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ group.category.name | titlecase }}</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>

@@ -1,3 +1,11 @@
+mat-form-field {
+  display: grid;
+}
+
+.add-item {
+  justify-content: end;
+}
+
 mat-dialog-actions {
   justify-content: center;
 }

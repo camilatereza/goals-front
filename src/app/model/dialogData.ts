@@ -1,5 +1,6 @@
 export interface DialogData {
-  type: 'form' | 'delete' | 'error';
+  type: 'formGroup' | 'formGoal' | 'delete' | 'error';
   title: string;
   msg?: string;
+  id?: number;
 }

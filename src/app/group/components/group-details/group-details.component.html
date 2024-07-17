@@ -4,7 +4,7 @@
     <mat-toolbar [style]="'background-color: ' + group.color">
 
       <mat-card-title>{{ group.name | titlecase }} </mat-card-title>
-      <mat-card-subtitle> >> {{ group.category | titlecase }}</mat-card-subtitle>
+      <mat-card-subtitle> >> {{ group.category.name | titlecase }}</mat-card-subtitle>
 
       <span class="spacer"></span>
 

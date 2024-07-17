@@ -13,8 +13,8 @@ export class GroupService {
 
   constructor(private http: HttpClient) {}
 
-  createNewGroup(body: string): Observable<Group> {
-    return this.http.post<Group>(this.api, body).pipe(take(1));
+  createNewGroup(group: Group): Observable<Group> {
+    return this.http.post<Group>(this.api, group);
   }
 
   removeItem(idGroup: number): Observable<Group> {
@@ -22,7 +22,7 @@ export class GroupService {
   }
 
   getAllGroups(): Observable<Group[]> {
-    return this.http.get<Group[]>(this.api).pipe(take(1));//, delay(1000));
+    return this.http.get<Group[]>(this.api).pipe(take(1), delay(1000));
   }
 
   getDetails(idGroup: number): Observable<Group> {

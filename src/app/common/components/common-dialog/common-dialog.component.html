@@ -1,17 +1,61 @@
 <h2 mat-dialog-title>{{ data.title }}</h2>
 
-@if(data.type == 'form'){
-<mat-dialog-content>form</mat-dialog-content>
-
-} @else {
+@if (data.type == 'delete' || data.type == 'error') {
 <mat-dialog-content> {{ data.msg }}</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-flat-button mat-dialog-close color="accent" (click)="onClose()">
-    Voltar
-  </button>
 
+<mat-dialog-actions>
+  <button mat-flat-button mat-dialog-close color="accent" (click)="onClose()">Voltar</button>
   @if(data.type == 'delete'){
   <button mat-flat-button color="warn" (click)="onDelete()">Deletar</button>
   }
+</mat-dialog-actions>
+
+} @else {
+<mat-dialog-content>
+  <form class="new-item" #form="ngForm">
+
+    @for (field of questions; track $index) {
+      @if ($index == 0) {
+      <mat-form-field hintLabel="'Max 15 caracteres'">
+        <mat-label>{{ field }}</mat-label>
+        <input matInput
+          maxlength="15"
+          placeholder="Ex: Metas de 2025"
+          name="{{ field }}"
+          [(ngModel)]="answer[$index]"
+          required>
+        <mat-hint [align]="'end'">{{ answer[$index].length }}/15</mat-hint>
+      </mat-form-field>
+
+      } @else if (field.includes('Selecione')) {
+      <mat-form-field>
+        <mat-label>{{ field }}</mat-label>
+        <mat-select
+          name="{{ field }}"
+          [(ngModel)]="answer[$index]"
+          required=""
+        >
+          @for (type of categories; track $index) {
+          <mat-option [value]="[type.id, type.name]">{{ type.name }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      } @else {
+        <mat-form-field>
+          <mat-label>{{ field }}</mat-label>
+          <input matInput
+            name="{{ field }}"
+            [(ngModel)]="answer[$index]"
+            >
+        </mat-form-field>
+      }
+    }
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="add-item">
+  <button mat-flat-button mat-dialog-close color="gray" (click)="onClose()">Voltar</button>
+  <button mat-flat-button color="accent" [disabled]="form.invalid" (click)="onSubmit()" >Cadastrar</button>
 </mat-dialog-actions>
 }

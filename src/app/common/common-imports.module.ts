@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
@@ -11,8 +12,11 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 import { CommonErrorComponent } from './components/common-error/common-error.component';
 import { CommomMethodsComponent } from './components/common-methods/commom-methods.component';
@@ -33,6 +37,10 @@ import { CommonDialogComponent } from './components/common-dialog/common-dialog.
     MatDialogModule,
     MatCheckboxModule,
     MatProgressBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    FormsModule,
     CommonErrorComponent,
     CommomMethodsComponent,
     CommonButtonComponent,
@@ -46,12 +54,16 @@ import { CommonDialogComponent } from './components/common-dialog/common-dialog.
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatProgressSpinnerModule,
     MatCardModule,
     MatDialogModule,
     MatIconModule,
     MatButtonModule,
     MatRippleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
 })
 export class CommonImportsModule {}
