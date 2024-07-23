@@ -34,14 +34,10 @@
 
       <mat-card-footer>
         <app-common-button
-          [type]="'favorite'"
-          [item]="group"
-          [service]="groupService"
+          [data]="{ type: 'favorite', item: group, service: groupService }"
         />
         <app-common-button
-          [type]="'delete'"
-          [item]="group"
-          [service]="groupService"
+          [data]="{ type: 'delete', item: group, service: groupService }"
           (itemDeleted)="reloadItens($event)"
         />
       </mat-card-footer>

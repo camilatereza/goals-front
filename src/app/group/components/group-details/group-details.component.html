@@ -9,11 +9,9 @@
       <span class="spacer"></span>
 
       <app-common-button
-        [type]="'favorite'"
-        [white]="true"
-        [item]="group"
-        [service]="groupService"/>
-      <app-common-button [white]="true" [type]="'back'"/>
+        [data]="{type: 'favorite', white: true, item: group, service: groupService}"
+      />
+      <app-common-button [data]="{ type: 'back', white: true }"/>
 
     </mat-toolbar>
   </mat-card-header>

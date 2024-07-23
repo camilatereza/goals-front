@@ -29,7 +29,7 @@ export class GroupService {
     return this.http.get<Group>(`${this.api}/${idGroup}`).pipe(take(1));
   }
 
-  favoriteUpdate(idGroup: number, body: string): Observable<Group> {
-    return this.http.put<Group>(`${this.api}/${idGroup}`, body);
+  favoriteUpdate(group: Group): Observable<Group> {
+    return this.http.put<Group>(`${this.api}/${group.id}`, group);
   }
 }

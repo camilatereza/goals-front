@@ -1,14 +1,14 @@
-@if (type == 'favorite') {
+@if (data.type == 'favorite') {
 <button
   mat-icon-button
   matTooltip="Favoritar dado"
   (click)="toggleFavorite()"
 >
-  <mat-icon class="favorite {{ white ? 'white-favorite' : '' }}">
-    {{ item.favorite ? "favorite" : "favorite_border" }}
+  <mat-icon class="favorite {{ data.white ? 'white-favorite' : '' }}">
+    {{ data.item.favorite ? "favorite" : "favorite_border" }}
   </mat-icon>
 </button>
-} @else if (type == 'delete') {
+} @else if (data.type == 'delete') {
 <button
   mat-icon-button
   matTooltip="Remover dado"
@@ -16,8 +16,8 @@
 >
   <mat-icon color="warn">delete</mat-icon>
 </button>
-} @else if (type == 'back'){
+} @else if (data.type == 'back'){
   <button mat-icon-button matTooltip="Voltar" (click)="back()">
-    <mat-icon class="back {{ white ? 'white-back' : '' }}">exit_to_app</mat-icon>
+    <mat-icon class="back {{ data.white ? 'white-back' : '' }}">exit_to_app</mat-icon>
   </button>
 }

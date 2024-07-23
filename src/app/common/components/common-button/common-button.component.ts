@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { CommonErrorComponent } from '../common-error/common-error.component';
 import { CommonDialogComponent } from '../common-dialog/common-dialog.component';
 import { DialogData } from '../../../model/dialogData';
+import { ButtonData } from '../../../model/buttonData';
 
 @Component({
   selector: 'app-common-button',
@@ -13,10 +14,7 @@ import { DialogData } from '../../../model/dialogData';
   styleUrl: './common-button.component.css',
 })
 export class CommonButtonComponent {
-  @Input() type: 'favorite' | 'delete' | 'back' | null = null;
-  @Input() white?: boolean;
-  @Input() item?: any;
-  @Input() service?: any;
+  @Input() data = {} as ButtonData;
   @Output() itemDeleted = new EventEmitter<number>();
 
   constructor(
@@ -26,19 +24,19 @@ export class CommonButtonComponent {
   ) {}
 
   toggleFavorite(): void {
-    if (this.item != null) {
-      this.item.favorite = !this.item.favorite;
-      const body = JSON.stringify(this.item);
+    if (this.data.item) {
+      this.data.item.favorite = !this.data.item.favorite;
 
-      this.service.favoriteUpdate(this.item.id, body).pipe(
+      let update = this.data.service.favoriteUpdate(this.data.item);
+      update.pipe(
         catchError((error) => {
-          this.error.onError('Erro ao favoritar grupo');
+          this.error.onError('Erro ao favoritar dado: ' + this.data.item.name);
           return of([]);
         })
-      );
+      ).subscribe();
     } else {
       this.error.onError(
-        'Não é possivel favoritar! Por favor informe um dado válido.'
+        'Não é possivel favoritar este dado! Por favor informe um dado válido.'
       );
     }
   }
@@ -55,18 +53,19 @@ export class CommonButtonComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (!result) {
-        this.deleteItem(this.item);
+        this.deleteItem();
       }
     });
   }
 
-  deleteItem(data: any): void {
-    let remove = this.service.removeItem(data.id);
+  deleteItem(): void {
+    let item = this.data.item;
+    let remove = this.data.service.removeItem(item.id);
 
     remove.subscribe(
       () => {
         //Para notificar o dado deletado e atualizar listagem da tela
-        this.itemDeleted.emit(data.id);
+        this.itemDeleted.emit(item.id);
       },
       (error: any) => {
         this.error.onError(
