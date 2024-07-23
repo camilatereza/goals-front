@@ -57,14 +57,16 @@ export class GroupComponent {
       data: {
         type: 'formGroup',
         title: 'Novo Grupo',
-        id: quant + 1
+        id: quant + 2
       } as DialogData
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
+      if (result.id) {
         this.onAddGroup(result);
-      }
+      } else (
+        this.dialog.closeAll()
+      )
     });
   }
 

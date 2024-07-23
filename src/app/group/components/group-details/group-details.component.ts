@@ -22,29 +22,17 @@ export class GroupDetailsComponent {
     private router: Router,
     private route: ActivatedRoute,
     private location: Location,
-    public service: GroupService,
+    public groupService: GroupService,
   ) {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    if (this.group && this.group.id == id) {
+    if (this.group) {
       this.navigation();
     } else {
-      service
-        .getDetails(id)
-        .pipe(
-          catchError((error) => {
-            this.openErrorDialog({
-              type: 'error',
-              title: 'Erro',
-              msg: 'Detalhes do grupo não encontrados. Informe um grupo válido!',
-            } as DialogData);
-
-            return of({} as Group);
-          })
-        )
-        .subscribe((result) => {
-          this.group = result;
-        });
+      groupService.getDetails(id).subscribe((result) => {
+        this.group = result;
+      });
+      this.navigation();
     }
   }
 
@@ -53,17 +41,19 @@ export class GroupDetailsComponent {
 
     if (navigation?.extras?.state?.['group']) {
       this.group = navigation.extras.state['group'];
+    } else {
+      this.openErrorDialog();
     }
   }
 
-  openErrorDialog(data: DialogData): void {
+  openErrorDialog(): void {
     const dialogRef = this.dialog.open(CommonDialogComponent, {
-      width: '30vw',
+      width: '400px',
       data: {
-        type: data.type,
-        title: data.title,
-        msg: data.msg,
-      },
+        type: 'error',
+        title: 'Erro',
+        msg: 'Detalhes do grupo não encontrados. Informe um grupo válido!'
+      } as DialogData
     });
 
     dialogRef.afterClosed().subscribe((result) => {
