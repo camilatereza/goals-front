@@ -11,16 +11,16 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   justify-items: center;
   align-items: center;
 }
 
 mat-card {
   flex-direction: row;
-  width: 20vw;
+  width: calc(25% - 1vw);
   height: 20vh;
-  margin-top: 3vh;
-  margin-right: 1vw;
+  margin: 3vh 0.5vw;
 }
 
 mat-card a {
