@@ -15,7 +15,7 @@
       matRipple
       [matRippleCentered]="true"
       [matRippleTrigger]="trigger"
-      [ngStyle]="{ 'border-top': '1rem solid ' + getColor(group) }"
+      [ngStyle]="{ 'border-top': '1rem solid ' + group.color }"
     >
       <a #trigger (click)="openDetails(group)" style="color: black">
         <mat-card-header>

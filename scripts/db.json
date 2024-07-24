@@ -82,6 +82,53 @@
       "measurable": "10%"
     }
   ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "Preto",
+      "translation": "black"
+    },
+    {
+      "id": 2,
+      "name": "Verde",
+      "translation": "green"
+    },
+    {
+      "id": 3,
+      "name": "Rosa",
+      "translation": "pink"
+    },
+    {
+      "id": 4,
+      "name": "Roxo",
+      "translation": "purple"
+    },
+    {
+      "id": 5,
+      "name": "Azul",
+      "translation": "blue"
+    },
+    {
+      "id": 6,
+      "name": "Vermelho",
+      "translation": "red"
+    },
+    {
+      "id": 7,
+      "name": "Laranja",
+      "translation": "orange"
+    },
+    {
+      "id": 8,
+      "name": "Marrom",
+      "translation": "brown"
+    },
+    {
+      "id": 9,
+      "name": "Cinza",
+      "translation": "gray"
+    }
+  ],
   "categories": [
     {
       "id": 1,

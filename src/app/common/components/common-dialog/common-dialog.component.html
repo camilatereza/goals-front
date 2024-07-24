@@ -41,6 +41,19 @@
         </mat-select>
       </mat-form-field>
 
+      } @else if (field.includes('Cor')) {
+      <mat-form-field>
+        <mat-label>{{ field }}</mat-label>
+        <mat-select
+          name="{{ field }}"
+          [(ngModel)]="answer[$index]"
+        >
+          @for (color of colors; track $index) {
+          <mat-option [value]="color.translation">{{ color.name }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
       } @else {
         <mat-form-field>
           <mat-label>{{ field }}</mat-label>

@@ -88,8 +88,4 @@ export class GroupComponent {
       state: { group: group },
     });
   }
-
-  getColor(group: Group): string {
-    return group.color || '';
-  }
 }

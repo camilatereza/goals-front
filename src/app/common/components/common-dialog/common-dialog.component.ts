@@ -4,10 +4,11 @@ import { catchError, map, of } from 'rxjs';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogData } from './../../../model/dialogData';
 import { Category } from '../../../model/category';
+import { Color } from '../../../model/color';
 import { Group } from '../../../model/group';
 import { Goal } from '../../../model/goal';
 import { Achievable } from '../../../model/achievable';
-import { CategoryService } from '../../services/category.service';
+import { SelectService } from '../../services/select.service';
 import { CommonErrorComponent } from '../common-error/common-error.component';
 
 @Component({
@@ -21,13 +22,14 @@ export class CommonDialogComponent {
   public questions: string[] = [];
   public answer: string[] = [''];
   public categories: Category[] = [];
+  public colors: Color[] = [];
 
   stepTwoAble: boolean = false;
 
   constructor(
     public dialogRef: MatDialogRef<CommonDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-    private categoryService: CategoryService,
+    private selectService: SelectService,
     private error: CommonErrorComponent,
   ) {
 
@@ -39,6 +41,7 @@ export class CommonDialogComponent {
         'Cor geral do grupo',
       ];
       this.loadCategories();
+      this.loadColors();
 
     } else if (data.type == 'formGoal') {
       this.questions = [
@@ -92,14 +95,27 @@ export class CommonDialogComponent {
   }
 
   loadCategories(): void {
-    this.categoryService.getAll().pipe(
-      map((categories) => {
-        this.categories = categories
+    this.selectService.getAllCategories().pipe(
+      map((result) => {
+        this.categories = result;
         }
       ),
       catchError((error) => {
         this.error.onError('Erro ao carregar categorias');
         return of({} as Category);
+      })
+    ).subscribe({next: () => {}});
+  }
+
+  loadColors(): void {
+    this.selectService.getAllColors().pipe(
+      map((result) => {
+        this.colors = result;
+        }
+      ),
+      catchError((error) => {
+        this.error.onError('Erro ao carregar cores para grupos');
+        return of({} as Color);
       })
     ).subscribe({next: () => {}});
   }
