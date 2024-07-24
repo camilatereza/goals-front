@@ -12,6 +12,13 @@
 <code> ng serve </code>
 </p>
 
+## Back-end:
+<p>
+O back-end foi criado em parceria com outra pessoa e pode ser acessado pelo link: <br />
+&emsp; https://github.com/DenilsonSilvaMonteiroFilho/goals-api <br />
+Ele passará por mudanças e publicação para vincular ao front, aqui presente.
+</p>
+
 ## Base:
 <p> 
 A organização das metas são baseadas em dois métodos juntos <br />
