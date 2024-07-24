@@ -85,46 +85,41 @@
   "colors": [
     {
       "id": 1,
-      "name": "Preto",
-      "translation": "black"
-    },
-    {
-      "id": 2,
       "name": "Verde",
       "translation": "green"
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Rosa",
       "translation": "pink"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Roxo",
       "translation": "purple"
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Azul",
       "translation": "blue"
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Vermelho",
       "translation": "red"
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "Laranja",
       "translation": "orange"
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Marrom",
       "translation": "brown"
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Cinza",
       "translation": "gray"
     }
