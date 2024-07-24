@@ -7,7 +7,7 @@
 ## Como executar:
 <p>
 -> Para rodar API mockada localmente  <br />
-<code> npm run server </code>
+<code> npm run server </code> <br />
 -> Para executar o front <br />
 <code> ng serve </code>
 </p>
